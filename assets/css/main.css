@@ -30,6 +30,10 @@ a {
 ul {
   list-style: none;
 }
+
+.mob-display {
+    display: none;
+}
 /*
   ========================================
   Nav
@@ -53,9 +57,8 @@ ul {
 }
 
 .nav-logo {
-    position: absolute;
-    left: -3em;
-    top: -2em;
+    position: relative;
+    display: none;
 }
 
 .nav-bottom-static,
@@ -63,8 +66,9 @@ ul {
     justify-content: space-between;
 }
 
+
 .nav-wrapper {
-    background: #FDFDFD;
+    background: #fff;
     
 }
 
@@ -79,7 +83,7 @@ ul {
 
 .nav-pop-out {
     padding: 0.65em 1.2em;
-    background: #131313;
+    background: #000;
 }
 
 .nav-pop-out a {
@@ -89,8 +93,8 @@ ul {
 
 .nav-bottom-static a {
     display: block;
-    font-size: 1rem;
-    padding: 1.28em 0.71em 0;
+    font-size: 0.95rem;
+    padding: 1.28em 0.71em;
     font-family: Shentox, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
@@ -98,8 +102,18 @@ ul {
     letter-spacing: 0.04em;
 }
 
-.nav-bottom-static li:first-child a {
+.nav-bottom-static a:hover {
+    color: #000;
+}
+
+.nav-bottom-static li:first-child .first {
     padding-left: 0;
+}
+
+a.search {
+    display: block;
+    padding: 1.2em 1.14em;
+    border-left: 1px solid #eee;
 }
 /*
   ========================================
@@ -107,7 +121,70 @@ ul {
   ========================================
 */
 
-.dropdown {
-    display: none;
+.drop-down {
+    position: relative;
+    display: inline-block
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 2em;
+    left: -1em;
+    background-color: #000;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    width: 100%;
+    border-bottom: 1px solid #666;
+}
+.dropdown-content a {
+    color:hsla(0,0%,100%,.6);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.reduce-size {
+    min-width: 100px;
+}
+li a:hover {color: #fff}
+
+.drop-down:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content::after {
+    content: "";
+    position: absolute;
+    top: -1.31em;
+    left: 20%;
+    margin-left: -5px;
+    border-width: 0.7em;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+}
+
+/*
+  ========================================
+  Display logo at less than 1024px
+  ========================================
+*/
+@media (max-width: 1024px) {
+    .nav-logo {
+        top: 0;
+        left: 0;
+        width: 7.71em;
+        height: 5.71em;
+        display: block;
+    }
+    .nav-logo a {
+       display: block;
+       padding: 2.2em 1.4em;
+       background-color: #f42;
+       background: linear-gradient(to bottom right,#c09,#f42 85%);
+    }
+}
