@@ -189,3 +189,9 @@ li a:hover {color: #fff}
        background: linear-gradient(to bottom right,#c09,#f42 85%);
     }
 }
+
+@media (max-width: 1212px){
+    .display-none {
+        display: none;
+    }
+}
