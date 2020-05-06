@@ -1,0 +1,113 @@
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+html {
+    font-size: 14px;
+    line-height: 1;
+}
+
+body {
+  font-family: "ARS Maquette","Helvetica Neue",Arial,sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/*
+  ========================================
+  Nav
+  ========================================
+*/
+
+.navbar,
+.nav-pop-out,
+.nav-bottom-static,
+.pop-out-left,
+.pop-out-right,
+.nav-section,
+.nav-icons
+{
+    display: flex;
+}
+
+.nav-bottom-static,
+.nav-wrapper {
+  width: 100%;
+}
+
+.nav-logo {
+    position: absolute;
+    left: -3em;
+    top: -2em;
+}
+
+.nav-bottom-static,
+.nav-pop-out {
+    justify-content: space-between;
+}
+
+.nav-wrapper {
+    background: #FDFDFD;
+    
+}
+
+.nav-bottom-static
+{
+    padding-left: 1.2em;
+}
+
+.nav-pop-out li {
+  margin-right: 0.9em;
+}
+
+.nav-pop-out {
+    padding: 0.65em 1.2em;
+    background: #131313;
+}
+
+.nav-pop-out a {
+    font-size: 0.9em;
+    color: hsla(0,0%,100%,.6);
+}
+
+.nav-bottom-static a {
+    display: block;
+    font-size: 1rem;
+    padding: 1.28em 0.71em 0;
+    font-family: Shentox, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #aaa;
+    letter-spacing: 0.04em;
+}
+
+.nav-bottom-static li:first-child a {
+    padding-left: 0;
+}
+/*
+  ========================================
+  Nav dropdown
+  ========================================
+*/
+
+.dropdown {
+    display: none;
+}
+
