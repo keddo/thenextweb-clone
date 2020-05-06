@@ -112,8 +112,9 @@ ul {
 
 a.search {
     display: block;
-    padding: 1.2em 1.14em;
+    padding: 1.4em 1.8em;
     border-left: 1px solid #eee;
+    color: #aaa;
 }
 /*
   ========================================
