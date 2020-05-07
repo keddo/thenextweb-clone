@@ -134,17 +134,14 @@ ul {
 
 .main {
     width: 100%;
-    overflow: hidden;
-    z-index: -9;
 }
 
 .cover {
-  margin-top: 3.71em;
+  /* margin-top: 3.71em; */
   padding: 0.285em;
 }
 .cover-story {
   padding: 0.285em;
-  position: relative;
   margin-bottom: 1em;
 }
 
