@@ -31,9 +31,7 @@ ul {
   list-style: none;
 }
 
-.mob-display {
-    display: none;
-}
+
 /*
   ========================================
   Nav
@@ -52,13 +50,23 @@ ul {
 }
 
 .nav-bottom-static,
-.nav-wrapper {
+.nav-wrapper,
+.nav-pop-out {
   width: 100%;
 }
 
 .nav-logo {
-    position: relative;
-    display: none;
+    top: 0;
+    left: 0;
+    width: 7.71em;
+    height: 3.85em;
+    display: block;
+}
+.nav-logo a {
+   display: block;
+   padding: 1.28em 1.4em;
+   background-color: #f42;
+   background: linear-gradient(to bottom right,#c09,#f42 85%);
 }
 
 .nav-bottom-static,
@@ -77,44 +85,111 @@ ul {
     padding-left: 1.2em;
 }
 
-.nav-pop-out li {
-  margin-right: 0.9em;
-}
-
-.nav-pop-out {
-    padding: 0.65em 1.2em;
-    background: #000;
-}
-
-.nav-pop-out a {
-    font-size: 0.9em;
-    color: hsla(0,0%,100%,.6);
-}
-
-.nav-bottom-static a {
-    display: block;
-    font-size: 0.95rem;
-    padding: 1.28em 0.71em;
-    font-family: Shentox, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #aaa;
-    letter-spacing: 0.04em;
-}
-
 .nav-bottom-static a:hover {
     color: #000;
 }
 
-.nav-bottom-static li:first-child .first {
-    padding-left: 0;
+.nav-icons {
+  margin-left: auto;
 }
 
-a.search {
+.nav-icons li {
     display: block;
-    padding: 1.4em 1.8em;
+    padding: 1.2em 1.6em;
     border-left: 1px solid #eee;
     color: #aaa;
+}
+
+.nav-icons a {
+    color: #aaa;
+    font-size: 1.4em;
+}
+
+.red-light {
+    color: #f42;
+}
+
+.nav-pop-out,
+.nav-section,
+.display-none {
+    display: none;
+}
+
+/*
+  ========================================
+  Main body
+  ========================================
+*/
+
+.main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+/*
+  ========================================
+  footer
+  ========================================
+*/
+
+.footer {
+    width: 100%;
+    background: #000;
+}
+
+/*
+  ========================================
+  Media queries
+  ========================================
+*/
+
+@media (min-width: 768px) {
+.nav-pop-out,
+.nav-section {
+  display: flex;
+}
+.nav-logo {
+  height: 5.71em;
+}
+
+.nav-logo a {
+    padding: 2.2em 1.4em;
+}
+.nav-pop-out li {
+  margin-right: 0.9em;
+}
+      
+.nav-pop-out {
+  padding: 0.65em 1.2em;
+  background: #000;
+}
+      
+.nav-pop-out a {
+  font-size: 0.9em;
+  color: hsla(0,0%,100%,.6);
+}
+      
+.nav-bottom-static li:first-child .first {
+  padding-left: 0;
+}
+
+.nav-bottom-static a {
+  display: block;
+  font-size: 0.95rem;
+  padding: 1.28em 0.71em;
+  font-family: Shentox, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #aaa;
+  letter-spacing: 0.04em;
+}
+
+.nav-icons {
+    margin-left: 0;
+}
+.nav-icons li {
+    padding: 0;
 }
 /*
   ========================================
@@ -169,29 +244,25 @@ li a:hover {color: #fff}
     border-color: transparent transparent #000 transparent;
 }
 
-/*
-  ========================================
-  Display logo at less than 1024px
-  ========================================
-*/
-@media (max-width: 1024px) {
-    .nav-logo {
-        top: 0;
-        left: 0;
-        width: 7.71em;
-        height: 5.71em;
-        display: block;
-    }
-    .nav-logo a {
-       display: block;
-       padding: 2.2em 1.4em;
-       background-color: #f42;
-       background: linear-gradient(to bottom right,#c09,#f42 85%);
-    }
+li.mob-display {
+    display: none;
+}
+      
 }
 
-@media (max-width: 1212px){
+@media (min-width: 1024px) {
+.nav-logo {
+  position: relative;
+  display: none;
+}
+
+.display-none {
+   display: block;
+}
+}
+
+@media (min-width: 1212px){
     .display-none {
-        display: none;
+        display: block;
     }
 }
