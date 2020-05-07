@@ -37,6 +37,14 @@ ul {
   Nav
   ========================================
 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  overflow-y: hidden;
+}
 
 .navbar,
 .nav-pop-out,
@@ -49,10 +57,13 @@ ul {
     display: flex;
 }
 
+.nav-wrapper {
+  width: 85%;
+}
+
 .nav-bottom-static,
-.nav-wrapper,
 .nav-pop-out {
-  width: 100%;
+  width: 98%;
 }
 
 .nav-logo {
@@ -122,11 +133,41 @@ ul {
 */
 
 .main {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    z-index: -9;
 }
 
+.cover {
+  margin-top: 3.71em;
+  padding: 0.285em;
+}
+.cover-story {
+  padding: 0.285em;
+  position: relative;
+  margin-bottom: 1em;
+}
 
+.article-1 {
+  background: linear-gradient(to right bottom, rgb(0, 0, 0), rgb(0,0,0, 50%)), url(../img/header-image-smartwatch-shipments-796x417.png) no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  object-fit: cover;
+}
+
+.article-2 {
+  background: #000 url(../img/rbcc-web_ad-feature_img-1.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  object-fit: cover;
+}
+
+.article-3 {
+  background: linear-gradient(to right bottom, rgb(0, 0, 0), rgb(0,0,0, 50%)), url(../img/vestiare-ceo-gq-796x417.png) no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  object-fit: cover;
+}
 /*
   ========================================
   footer
@@ -144,7 +185,22 @@ ul {
   ========================================
 */
 
+@media (max-width: 767px) {
+  .cover-story {
+    min-height: 30vh;
+  }
+}
+
 @media (min-width: 768px) {
+.nav-wrapper {
+  width: 100%;
+}
+
+.nav-bottom-static,
+.nav-pop-out {
+  width: 100%;
+}
+
 .nav-pop-out,
 .nav-section {
   display: flex;
@@ -157,7 +213,7 @@ ul {
     padding: 2.2em 1.4em;
 }
 .nav-pop-out li {
-  margin-right: 0.9em;
+  margin-right: 0.7em;
 }
       
 .nav-pop-out {
@@ -191,6 +247,10 @@ ul {
 .nav-icons li {
     padding: 0;
 }
+
+.cover {
+  margin-top: 5.71em;
+}
 /*
   ========================================
   Nav dropdown
@@ -199,7 +259,7 @@ ul {
 
 .drop-down {
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 
 .dropdown-content {
@@ -210,7 +270,7 @@ ul {
     background-color: #000;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 999999;
 }
 
 .dropdown-content li {
@@ -259,6 +319,7 @@ li.mob-display {
 .display-none {
    display: block;
 }
+
 }
 
 @media (min-width: 1212px){
