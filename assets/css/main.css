@@ -137,12 +137,15 @@ ul {
 }
 
 .cover {
-  /* margin-top: 3.71em; */
+  margin-top: 3.71em;
   padding: 0.285em;
+  display: flex;
+  flex-direction: column;
 }
 .cover-story {
   padding: 0.285em;
   margin-bottom: 1em;
+  position: relative;
 }
 
 .article-1 {
@@ -185,6 +188,7 @@ ul {
 @media (max-width: 767px) {
   .cover-story {
     min-height: 30vh;
+    flex: 1;
   }
 }
 
