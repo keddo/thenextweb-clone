@@ -202,13 +202,6 @@ h5 {
   position: relative;
 }
 
-.contianer {
-  margin: 0 auto;
-  width: 95%;
-  max-width: 1192px;
-  padding: 0 1.42em;
-}
-
 .cover article {
   min-height: 30vh;
   position: relative;
@@ -290,7 +283,101 @@ h5 {
   margin-left: 0;
 }
 
+/*
+  ========================================
+  Latest news
+  ========================================
+*/
 
+.container {
+  margin: 0 auto;
+  max-width: 1192px;
+  padding: 0 1.42em;
+}
+
+.latest {
+  margin-bottom: 2em;
+  padding-top: 1.71em;
+}
+
+.latest h2 {
+  margin-bottom: 0.8em;
+}
+
+.u-row {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+  margin: -0.57em;
+}
+
+.ul-col-xs-12 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+[class*="u-col-"],
+[class^="u-col-"] {
+  flex: 0 0 auto;
+  padding: 0.57em;
+  position: relative;
+}
+
+.story--smallMobile .story-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5.35em;
+  padding-top: 5.35em;
+}
+
+.story-image {
+  background-color: #000;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 0.57em;
+}
+
+.story--smallMobile,
+.story-title {
+  font-size: 1rem !important;
+  font-weight: 700;
+  line-height: 1.2em !important;
+}
+
+.story-title a {
+  color: #000;
+}
+
+.u-row .story-byline {
+  border: none !important;
+}
+
+.story-byline {
+  color: #aaa;
+  font-size: 0.85rem;
+  padding-top: 0.28em;
+}
+
+.story-byline::after {
+  content: "";
+  display: block;
+  margin-bottom: 0.4em;
+}
+
+.story-byline li {
+  display: block;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.story-byline a {
+  color: #aaa;
+}
 /*
   ========================================
   Latest funding rounds
@@ -604,6 +691,59 @@ h5 {
   top: 13px;
   width: 4px;
 }
+
+/*
+  ========================================
+  latest deals
+  ========================================
+*/
+
+.deals {
+  margin-bottom: 2em;
+}
+
+.story-dealDiscount {
+  display: none;
+}
+
+.deals-header {
+  margin-bottom: 1.72em;
+}
+
+.deals-header h2 {
+  line-height: 2.2;
+  float: left;
+}
+
+.deals-header-more {
+  float: right;
+  line-height: 1.2;
+  margin-top: 0.78em;
+}
+
+.deals-header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.story--deal .story-dealPrice {
+  color: #aaa;
+  font-size: 0.85rem;
+  line-height: 1.28em;
+  padding-top: 0.28em;
+  vertical-align: baseline;
+}
+
+.story-dealPrice-old {
+  text-decoration: line-through;
+  margin-right: 0.28em;
+}
+
+.story-dealPrice-new {
+  color: #555;
+  font-size: 1rem;
+}
 /*
   ========================================
   footer
@@ -624,8 +764,20 @@ h5 {
 @media (max-width: 767px) {
   .cover-story {
     min-height: 30vh;
-    flex: 1;
   }
+
+  .story--smallMobile {
+    min-height: 5.142em;
+    padding-left: 6.285em;
+    position: relative;
+  }
+  
+  .story-title {
+    margin-bottom: 0.1em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
 }
 
 @media (min-width: 768px) {
