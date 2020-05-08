@@ -28,7 +28,9 @@ a {
     color: #f42;
     text-decoration: none;
 }
-
+a:hover {
+  color: #000;
+}
 ul {
   list-style: none;
 }
@@ -36,6 +38,17 @@ ul {
 h2 {
   font-family: Avalon, sans-serif;
   color: #f42;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  color: #f42;
+  font-size: 1.42rem;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 h4 {
@@ -51,9 +64,16 @@ h5 {
   line-height: 1.5;
 }
 
+[class*="col-"] {
+  flex: 0 0 auto;
+  padding: 0.57em;
+  position: relative;
+}
+
 .col-xs-12 {
   max-width: 100%;
 }
+
 
 /*
   ========================================
@@ -76,7 +96,7 @@ h5 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 999;
   overflow-y: hidden;
 }
 
@@ -236,6 +256,10 @@ h5 {
   font-weight: 300;
 }
 
+.deals-header .deals-header-more:hover {
+  color: #000;
+}
+
 .deals-header .deals-header-more:first-of-type {
   padding-top: 1em;
 }
@@ -366,7 +390,153 @@ h5 {
   color: #aaa;
 }
 
+/*
+  ========================================
+  section
+  ========================================
+*/
 
+.lazy.lazyLoaded {
+  opacity: 1;
+}
+
+.section h2 {
+  margin-bottom: 1em;
+}
+
+.section-popular {
+  height: 0;
+  padding-top: 75%;
+  position: relative;
+  width: 100%;
+}
+
+.section-popular-image {
+  background-color: #000;
+  background-size: cover;
+  background-position: 50%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.section-popular-trigger {
+  background: transparent url(../img/image-gradient.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.section-popular-header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  z-index: 3;
+}
+
+.section-popular-section {
+  color: #fff;
+  font-size: 0.92em;
+  pointer-events: none;
+}
+
+.section-popular-title {
+  margin-bottom: 0.42em;
+}
+
+.section-popular-title a {
+  color: #fff;
+}
+
+.section-popular-byline {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.14em;
+}
+
+.section-popular-byline li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.section-popular-byline a {
+  color:hsla(0, 0%, 100%, 0.6);
+}
+
+.section-latest {
+  display: flex;
+  background-color: rgba(255,68,34, .06);
+  margin: 0.142em 0;
+}
+
+.section-latest-header {
+  flex: 1;
+  overflow: hidden;
+  padding: 0.71em 1em 0;
+}
+
+.section-latest-section {
+  color: #f42;
+  font-size: 0.92rem;
+}
+
+.section-latest-title {
+  max-height: 4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.section-latest-image {
+  flex: 0 0 96px;
+  background-color: #f42;
+  background-position: 50%;
+  background-size: cover;
+  height: 96px;
+  width: 96px;
+}
+
+.lazy {
+  transition: .4s ease;
+}
+
+.section-headline {
+  border-bottom: 1px solid #eee;
+}
+
+.section-headline h4 {
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.section-headline h4 a {
+  display: block;
+  padding: 0.42em 0 0.42em 1em;
+  position: relative;
+  color: #555;
+}
+
+.section-headline h4 a::before {
+  background-color: #f42;
+  border-radius: 50%;
+  content: "";
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 4px;
+}
 /*
   ========================================
   footer
