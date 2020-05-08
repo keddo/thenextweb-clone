@@ -751,9 +751,74 @@ h5 {
 */
 
 .footer {
-    width: 100%;
-    background: #000;
+   position: relative;
+   text-align: center;
+   z-index: 4;
 }
+
+.footer-links {
+  background: #131313;
+  padding: 2.5em 0;
+}
+
+.footer-links-social {
+  margin-bottom: 1.5em;
+}
+
+.footer-links-social li {
+  display: inline-block;
+  margin: 0 .21em;
+}
+
+.footer-links-social li a {
+  background-color: #333;
+  border-radius: 50%;
+  display: block;
+  height: 3em;
+  width: 3em;
+  padding: 1em;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-links-menu li{
+  font-family: Shentox, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 0.92em;
+  line-height: 1.71;
+  margin: 0 0.28em;
+}
+
+.footer-links-menu a {
+  color: #aaa;
+}
+
+.footer-legal {
+  background: #000;
+  color: #aaa;
+  font-size: 0.92rem;
+  padding: 2.5em 0;
+}
+
+.footer-legal span {
+  display: block;
+}
+
+.footer-legal-logoStackPath,
+.footer-legal-logoTNW {
+  display: inline-block;
+  height: 0.64em;
+  margin-right: 0.2em;
+}
+
+.footer-legal span b {
+  color: #f42;
+  font-weight: 700;
+}
+
+
 
 /*
   ========================================
