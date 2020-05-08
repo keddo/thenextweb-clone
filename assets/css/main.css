@@ -58,10 +58,11 @@ h4 {
 
 h5 {
   font-family: Shentox, sans-serif;
+  font-size: 1em;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: .04em;
-  line-height: 1.5;
+  letter-spacing: -.04em;
+  line-height: 1.4;
 }
 
 [class*="col-"] {
@@ -84,6 +85,10 @@ h5 {
 .investment-icon {
   font-size: 1.3rem;
   color: #000;
+  margin-right: 0.6em;
+}
+.cover-icon {
+  font-size: 1.5em;
   margin-right: 0.6em;
 }
 /*
@@ -191,36 +196,98 @@ h5 {
 }
 
 .cover {
+  margin: 0 auto;
   margin-top: 3.71em;
   padding: 0.285em;
-  display: flex;
-  flex-direction: column;
-}
-.cover-story {
-  padding: 0.285em;
-  margin-bottom: 1em;
   position: relative;
 }
 
-.article-1 {
-  background: linear-gradient(to right bottom, rgb(0, 0, 0), rgb(0,0,0, 50%)), url(../img/header-image-smartwatch-shipments-796x417.png) no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  object-fit: cover;
+.contianer {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1192px;
+  padding: 0 1.42em;
 }
 
-.article-2 {
-  background: #000 url(../img/rbcc-web_ad-feature_img-1.jpg) no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  object-fit: cover;
+.cover article {
+  min-height: 30vh;
+  position: relative;
 }
 
-.article-3 {
-  background: linear-gradient(to right bottom, rgb(0, 0, 0), rgb(0,0,0, 50%)), url(../img/vestiare-ceo-gq-796x417.png) no-repeat;
+.cover-story {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cover-trigger,
+.cover-image {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  top: 4px;
+  right: 4px;
+}
+
+.cover-image {
+  background-color: #000;
   background-size: cover;
   background-position: 50%;
-  object-fit: cover;
+  z-index: 1;
+}
+
+.cover-trigger {
+  transition: background-color .4s ease;
+  background: rgba(0, 0, 0, 0.25) url(../img/image-gradient.png) no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  will-change: background-color;
+  z-index: 2;
+}
+
+.cover-date {
+  display: none;
+}
+
+.cover-header {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  padding: 1em 0.85em;
+  z-index: 3;
+}
+
+.cover h5{
+  color: #fff;
+}
+
+.cover a {
+  color: #fff;
+}
+
+.cover h2 {
+  font-size: 1.4rem;
+  margin-bottom: .4em;
+}
+
+.cover-byline {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 0.85rem;
+  line-height: 1.14em;
+}
+
+.cover-byline a {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.cover-byline li {
+  display: inline-block;
+  margin-left: 0.42em;
+}
+
+.cover-byline li:first-child {
+  margin-left: 0;
 }
 
 
