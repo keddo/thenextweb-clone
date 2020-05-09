@@ -20,6 +20,7 @@ html {
 
 body {
   font-family: "ARS Maquette","Helvetica Neue",Arial,sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 14px;
   color: #555;
 }
@@ -322,6 +323,10 @@ h5 {
   padding: 0.57em;
   position: relative;
 }
+.story--smallMobile {
+  padding-left: 6.285em;
+  position: relative;
+}
 
 .story--smallMobile .story-image {
   position: absolute;
@@ -361,6 +366,7 @@ h5 {
   color: #aaa;
   font-size: 0.85rem;
   padding-top: 0.28em;
+  font-weight: 300;
 }
 
 .story-byline::after {
@@ -426,6 +432,10 @@ h5 {
 }
 .verticals {
   margin-bottom: 2em;
+}
+
+.vertical:last-of-type {
+    display: none;
 }
 
 .vertical {
@@ -708,17 +718,12 @@ h5 {
 
 .deals-header {
   margin-bottom: 1.72em;
-}
-
-.deals-header h2 {
-  line-height: 2.2;
-  float: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .deals-header-more {
-  float: right;
   line-height: 1.2;
-  margin-top: 0.78em;
 }
 
 .deals-header::after {
@@ -833,8 +838,6 @@ h5 {
 
   .story--smallMobile {
     min-height: 5.142em;
-    padding-left: 6.285em;
-    position: relative;
   }
   
   .story-title {
@@ -846,6 +849,11 @@ h5 {
 }
 
 @media (min-width: 768px) {
+.container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 2em;
+}
 .nav-wrapper {
   width: 100%;
 }
@@ -901,10 +909,186 @@ h5 {
 .nav-icons li {
     padding: 0;
 }
-
+/* Cover articles */
 .cover {
   margin-top: 5.71em;
+  height: 65vh;
 }
+
+.cover-header {
+  padding: 1.14em 0.85em;
+}
+
+.cover-header h2 {
+  font-size: 2.85rem;
+  line-height: 1;
+}
+
+.second-cover .cover-header h2,
+.third-cover .cover-header h2 {
+   font-size: 1.42rem;
+} 
+
+.big-cover {
+  grid-area: bigCover;
+}
+
+.second-cover {
+  grid-area: secondCover;
+}
+
+.third-cover {
+  grid-area: thirdCover;
+}
+
+.cover-grid-3 {
+  display: grid;
+  grid-template-areas: "bigCover bigCover secondCover"
+                        "bigCover bigCover thirdCover";
+}
+
+/* latest news */
+
+.latest {
+  margin-bottom: 3em;
+}
+
+.u-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ul-col-m-4 {
+  flex-basis: 33.333333%;
+  max-width: 33.333333%;
+}
+
+[class*=u-col-] {
+  padding: 0.71em;
+}
+
+[class*="u-col-"],
+[class^="u-col-"] {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.story-image {
+  width: 100%;
+  position: relative;
+  height: 30vh;
+}
+
+.story-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+
+.story--smallMobile .story-image {
+  position: relative;
+  width: 100%;
+}
+
+.story--smallMobile {
+  padding-left: 0;
+}
+
+/* Funding section */
+.deals-header {
+  width: 100%;
+}
+
+/* .deals-header ul {
+  width: 45%;
+  align-self: flex-end;
+  margin-left: auto;
+} */
+.deals-header ul li {
+  padding: 1.2em 0.3em 0;
+  display: inline-block;
+  margin-left: 0.7em;
+}
+
+.deals-header ul li:not(:last-child)::after {
+    display: inline-block;
+    content: "|";
+    padding-left: 0.5em;
+    font-size: 1.2rem;
+    color: #f42;
+}
+
+.deals-header .deals-header-more{
+  font-size: 1.2rem;
+  font-weight: 300;
+  display: inline;
+}
+
+.deals-header ul:last-of-type::after {
+  margin: 0;
+}
+
+.verticals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+
+.deals .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.story--smallMobile .story-image {
+  height: 40vh;
+}
+
+.deals .deals-header {
+  flex-direction: row;
+}
+.deals .deals-header .deals-header-more {
+  width: 10%;
+  margin-left: auto;
+}
+
+.discount-text,
+.story-dealDiscount {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  pointer-events: none;
+ 
+}
+
+.story-dealDiscount {
+  height: 5.71em;
+  width: 5.71em;
+  border-width: 3em;
+  border-style: solid;
+  border-color: yellow yellow transparent transparent;
+  z-index: 10;
+}
+
+.discount-text {
+  top: 1.4em;
+  right: 0.8em;
+  color: #000;
+  z-index: 11;
+  transform: rotate(45deg);
+}
+
 /*
   ========================================
   Nav dropdown
@@ -941,7 +1125,9 @@ h5 {
 .reduce-size {
     min-width: 100px;
 }
-li a:hover {color: #fff}
+li a:hover {
+  color: #e7662d;
+}
 
 .drop-down:hover .dropdown-content {
     display: block;
