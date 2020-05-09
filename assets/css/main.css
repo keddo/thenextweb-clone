@@ -1149,6 +1149,10 @@ li a:hover {
 li.mob-display {
     display: none;
 }
+
+.footer-legal span {
+  display: inline-block;
+}
       
 }
 
