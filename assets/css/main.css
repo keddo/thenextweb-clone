@@ -19,8 +19,7 @@ html {
 }
 
 body {
-  font-family: "ARS Maquette","Helvetica Neue",Arial,sans-serif;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #555;
 }
@@ -103,7 +102,6 @@ h5 {
   left: 0;
   width: 100%;
   z-index: 99999;
-  overflow-y: hidden;
 }
 
 .navbar,
@@ -1176,7 +1174,7 @@ li.mob-display {
 
 .container {
   width: 100%;
-  margin-top: 6em;
+  margin-top: 6.5em;
 }
 
 .u-row {
