@@ -252,6 +252,8 @@ h5 {
 
 .cover h5{
   color: #fff;
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .cover a {
@@ -847,6 +849,10 @@ h5 {
 }
 
 @media (min-width: 768px) {
+h2 {
+  font-size: 2em;
+}
+
 .container {
   width: 95%;
   margin: 0 auto;
@@ -919,12 +925,14 @@ h5 {
 
 .cover-header h2 {
   font-size: 2.85rem;
-  line-height: 1;
+  line-height: 2.2;
 }
 
 .second-cover .cover-header h2,
 .third-cover .cover-header h2 {
-   font-size: 1.42rem;
+   font-size: 2rem;
+   font-weight: 800;
+   line-height: 1.1;
 } 
 
 .big-cover {
@@ -1164,14 +1172,45 @@ li.mob-display {
   top: 1em;
   right: 1em;
   z-index: 99;
-  color: #666;
+  color: #fff;
 }
 
 .cover-header h2 {
   font-size: 3.85rem;
-  line-height: 1;
+  line-height: 1.2;
+  font-weight: 800;
 }
 
+.cover-gradient {
+  background: transparent url(../img/cover-gradient.png);
+  background-position: 0 0;
+  background-size: cover;
+  position: absolute;
+  top: .28em;
+  bottom: .28em;
+  left: .28em;
+  right: .28em;
+  mix-blend-mode: lighten;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.cover-logo {
+  color: #fff;
+  position: absolute;
+  right: 1.71em;
+  background: transparent url(../img/svg/tnw.svg);
+  background-size: cover;
+  left: 1.17em;
+  max-width: 50%;
+  height: 100%;
+  max-height: 8em;
+  line-height: 1;
+  top: 1.71em;
+  z-index: 5;
+  pointer-events: none;
+  text-align: right;
+}
 .container {
   width: 100%;
   margin-top: 7em;
