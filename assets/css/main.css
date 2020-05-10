@@ -440,8 +440,10 @@ h5 {
 
 .deals-header h2 {
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: 1;
   letter-spacing: -0.045em;
+  width: 45%;
+  min-width: 300px;
 }
 
 /* arrow */
@@ -909,14 +911,14 @@ h5 {
 
   .cover-header h2 {
     font-size: 2.85rem;
-    line-height: 2.2;
+    line-height: 1.2;
   }
 
   .second-cover .cover-header h2,
   .third-cover .cover-header h2 {
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 1.1;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.2;
   }
 
   .big-cover {
@@ -995,7 +997,7 @@ h5 {
   }
 
   .deals-header ul li {
-    padding: 1.2em 0.3em 0;
+    padding: 1.2em 0 0;
     display: inline-block;
     margin-left: 0.7em;
   }
@@ -1003,8 +1005,8 @@ h5 {
   .deals-header ul li:not(:last-child)::after {
     display: inline-block;
     content: "|";
-    padding-left: 0.5em;
-    font-size: 1.2rem;
+    padding-left: 0.3em;
+    font-size: 1rem;
     color: #f42;
   }
 
@@ -1208,10 +1210,6 @@ h5 {
 
   .deals-header {
     justify-content: space-between;
-  }
-
-  .deals-header h2 {
-    width: 60%;
   }
 
   .deals-header ul {
