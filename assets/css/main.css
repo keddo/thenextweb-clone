@@ -442,8 +442,6 @@ h5 {
   font-size: 2rem;
   line-height: 1;
   letter-spacing: -0.045em;
-  width: 45%;
-  min-width: 300px;
 }
 
 /* arrow */
@@ -1039,10 +1037,6 @@ h5 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
-  }
-
-  .deals .deals-header {
-    flex-direction: row;
   }
 
   .deals .deals-header .deals-header-more {
