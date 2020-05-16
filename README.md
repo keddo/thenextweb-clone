@@ -13,7 +13,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Open Live Demo](https://rawcdn.githack.com/keddo/thenextweb-clone/cb582e4787a0fb76aeebfd3a564ebf607ffb51ee/index.html)
+[Open Live Demo](https://rawcdn.githack.com/keddo/thenextweb-clone/1eb07608b844a8122134af6a2870275e7a22b7a7/index.html)
 
 
 ## Getting Started
