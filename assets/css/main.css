@@ -405,6 +405,7 @@ img {
   display: flex;
   margin: 2px 0;
   background-color: rgba(255, 68, 34, 0.06);
+  justify-content: center;
 }
 
 .section-latest-header {
@@ -413,9 +414,10 @@ img {
 
 .section-latest-image {
   display: block;
-  width: 6.85em;
-  height: 6.85em;
+  width: 6em;
+  height: 6em;
   object-fit: cover;
+  max-width: 6em;
 }
 
 .section-headline h4 {
